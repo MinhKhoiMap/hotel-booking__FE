@@ -1,0 +1,31 @@
+.review-section__wrapper {
+  padding: 125px 124px;
+}
+
+.reivew-section__title {
+  margin-bottom: 67px;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 78px;
+  color: var(--primary-color-text);
+  text-transform: capitalize;
+}
+
+.reivew-section__post-group {
+  display: flex;
+  height: 660px;
+}
+
+.main-part {
+  margin: 0 20px;
+  width: 38%;
+  height: calc(100% + 40px);
+}
+
+.side-part {
+  margin: -20px 20px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}

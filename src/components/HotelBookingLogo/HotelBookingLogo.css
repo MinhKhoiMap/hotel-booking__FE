@@ -1,0 +1,43 @@
+.hotel-booking-logo__container {
+  width: 41px;
+  height: 51px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hotel-booking-logo__container .left {
+  position: absolute;
+  left: 0;
+}
+
+.hotel-booking-logo__container .left img {
+  width: 9.08px;
+  height: 45.92px;
+}
+
+.hotel-booking-logo__container .right {
+  position: absolute;
+  top: 3px;
+  right: 4.7px;
+}
+
+.hotel-booking-logo__container .right img.last-layout {
+  width: 4.17px;
+  height: 41.16px;
+}
+
+.hotel-booking-logo__container .right img.mid-layout {
+  width: 4.17px;
+  height: 44.03px;
+}
+
+.hotel-booking-logo__container .main {
+  position: absolute;
+  left: 8.2px;
+}
+
+.hotel-booking-logo__container .main img {
+  width: 40.57px;
+  height: 51.73px;
+}

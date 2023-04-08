@@ -1,0 +1,64 @@
+.review-post__container {
+  width: 100%;
+  background-color: var(--primary-color-bg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.review-post__customer-info {
+  max-width: 400px;
+  padding: 40px 45px 20px;
+  color: var(--text-color-white);
+}
+
+.review-post__customer-info .icon {
+  text-align: right;
+  font-size: 2rem;
+}
+
+.main-part .review-post__container {
+  height: 100%;
+}
+
+.side-part .review-post__container {
+  margin: 20px 0;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.review-post__customer-img {
+  background-position: center;
+  background-size: cover;
+}
+
+.main-part .review-post__customer-img {
+  width: 80%;
+  height: 307.64px;
+}
+
+.side-part .review-post__customer-img {
+  margin-left: 40px;
+  width: 265.73px;
+  height: 275.95px;
+}
+
+.review-post__customer-name {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 43px;
+}
+
+.review-post__customer-job {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 31px;
+}
+
+.review-post__comment {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: #999;
+}

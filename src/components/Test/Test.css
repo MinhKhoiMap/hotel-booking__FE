@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item {
+  width: 342.39px;
+  height: 541.69px;
+  margin: 0 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.item:nth-child(2) {
+  transform: scale(1.2);
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-style: bold;
+  font-size: 20px;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.previous-btn {
+  left: 10%;
+}
+
+.next-btn {
+  right: 10%;
+}

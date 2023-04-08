@@ -1,0 +1,103 @@
+:root {
+  --primary-color-bg: #122526;
+  --primary-color-text: #122526;
+  --text-color-white: #fff;
+  --text-color-gray: #f8f9f9;
+  --text-color-blue: #54cfdb;
+  --text-color-black: #000;
+  --button-primary-color: #54cfdb;
+  --button-white-color: #fff;
+  --button-primary-boder: #122526;
+  --border-white-color: #fff;
+  --background-gray: #f9f9f9;
+  --border-gray: #dddfe2;
+  --price-text-color: #e12d2d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+input,
+input::placeholder {
+  font-family: "Reem Kufi Ink", sans-serif;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Reem Kufi Ink", sans-serif;
+  font-size: 1.8rem;
+  line-height: 27px;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.form {
+  padding: 16px 24px 24px;
+  min-width: 500px;
+  min-height: 400px;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 2px;
+}
+
+@keyframes blinkblink0_2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes blinkblink0_5 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+  }
+  100% {
+    height: auto;
+    opacity: 1;
+  }
+}

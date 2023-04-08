@@ -1,0 +1,314 @@
+.search-tile__container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search-tile__bg {
+  margin-left: -1px;
+  width: 100%;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.search-tile__main-part {
+  min-width: 1020px;
+  margin: 24px auto;
+  position: absolute;
+  top: 0;
+}
+
+.welcom-message__wrapper {
+  color: var(--text-color-white);
+  animation: fadeIn 0.25s linear;
+  text-align: center;
+}
+
+.welcom-message__title {
+  margin-bottom: 4px;
+}
+
+.search-tile__search-group {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-tile__classify-bar {
+  width: 900px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 997;
+}
+
+.search-tile__classify-bar .label-wrapper .underline {
+  width: calc(100% + 20px);
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.search-tile__classify-bar.search-tile__classify-bar--current
+  .label-wrapper
+  .underline {
+  background-color: var(--text-color-blue);
+}
+
+.search-tile__type {
+  padding-top: 16px;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-tile__classify-bar .label-wrapper {
+  width: fit-content;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.search-tile__classify-bar .label {
+  display: inline;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.search-tile__classify-bar.search-tile__classify-bar--current .label {
+  color: var(--button-primary-color);
+}
+
+.search-tile__classify-bar.search-tile__classify-bar--current path {
+  fill: var(--button-primary-color);
+}
+
+.search-tile__search-details {
+  width: 100%;
+  padding: 32px 48px 48px;
+  background-color: var(--background-gray);
+  position: relative;
+  top: -20px;
+  /* z-index: 96; */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-tile__search-input-wrapper {
+  margin-top: 20px;
+  padding: 0 10px;
+  width: 100%;
+  height: 66px;
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.search-tile__search-icon {
+  padding: 12px 16px 12px 12px;
+  font-size: 2rem;
+}
+
+.search-tile__search-input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.search-tile__search-input-wrapper input::placeholder {
+  font-size: 1.6rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-tile__search-input-wrapper :focus::placeholder {
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.search-tile__set-detail-part {
+  margin: 20px -14px 0 -14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-tile__date-booking,
+.search-tile__room-detail {
+  margin: 0 14px;
+  padding: 12px 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.search-tile__date {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.search-tile__date .icon {
+  padding: 12px 18px;
+  font-size: 2.5rem;
+}
+
+.search-tile__date-info .day {
+  font-size: 1.7rem;
+  letter-spacing: 1.8px;
+  color: var(--text-color-black);
+}
+
+.search-tile__date-info .date {
+  font-size: 1.4rem;
+  color: #999;
+  text-transform: capitalize;
+}
+
+.date-picker__booking {
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.date-picker__booking input::placeholder {
+  font-size: 1.6rem;
+}
+
+.search-tile__room-infos {
+  flex: 1;
+  position: relative;
+  z-index: 9999;
+  user-select: none;
+}
+
+.search-tile__room-peoples {
+  font-size: 1.7rem;
+  color: var(--text-color-black);
+}
+
+.search-tile__room-quantity {
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.search-tile__room-icon {
+  font-size: 1.8rem;
+  padding: 12px 16px 12px;
+}
+
+.search-tile__room-detail .icon-list {
+  font-size: 1.7rem;
+  padding: 12px 16px;
+}
+
+.search-tile__search-btn {
+  width: 490px;
+  height: 64px;
+  border-radius: 10px;
+  font-size: 2.8rem;
+  letter-spacing: 1.4px;
+  color: var(--text-color-white);
+  background-color: var(--button-primary-color);
+  position: relative;
+  z-index: 333;
+  top: -45px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: filter 0.15s linear;
+}
+
+.search-tile__search-btn:hover {
+  filter: brightness(0.8);
+}
+
+.search-tile__room-setting {
+  min-width: 200px;
+  background-color: var(--text-color-white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px 0 12px 16px;
+  border-radius: 15px;
+  position: absolute;
+  top: calc(100% + 28px);
+  left: -40px;
+  z-index: 999;
+  animation: dropDown 0.1s ease-in;
+  will-change: height, opacity;
+}
+
+.search-tile__room-setting::before {
+  content: "";
+  display: block;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  animation: slideLeft 0.2s ease-in-out;
+}
+
+.search-tile__room {
+  display: flex;
+}
+
+.search-tile__room .label {
+  width: 160px;
+  font-size: 1.6rem;
+  line-height: 21px;
+  padding: 8px;
+}
+
+.search-tile__room-volumne {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.search-tile__room-numbers {
+  width: 30px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.search-tile__room-volumne-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: 0 16px;
+  background-color: transparent;
+  border: 1px solid var(--button-primary-color);
+  color: var(--button-primary-color);
+}
+
+.search-tile__room-volumne-btn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+}

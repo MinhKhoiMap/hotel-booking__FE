@@ -1,0 +1,73 @@
+.search-top__container {
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #20274d;
+}
+
+.search-top__container > div {
+  height: 48px;
+}
+
+.search-top__search-input {
+  margin: 0 16px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-top__search-input input {
+  padding: 8px 8px 8px 48px;
+  width: 350px;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.search-top__search-input .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+}
+
+.search-top__date-picker-range .date-picker-range {
+  height: 100%;
+  background-color: #fff !important;
+  font-family: "Reem Kufi Ink", sans-serif;
+}
+
+.search-top__container .search-btn {
+  margin: 0 16px;
+  width: 130px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #75a8f9;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.search-top__container .search-btn::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.search-top__container .search-btn:hover::before {
+  transform: translate(-50%, -50%);
+}

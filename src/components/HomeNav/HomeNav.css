@@ -1,0 +1,51 @@
+.home-nav__wrapper {
+  padding: 30px 25px 24px 61px;
+  background-color: var(--primary-color-bg);
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-nav__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.home-nav__navigate,
+.home-nav__register-login-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.home-nav__navigate {
+  color: var(--text-color-white);
+  font-size: 1.8rem;
+}
+
+.home-nav__navigate div {
+  margin: 0 20px;
+}
+
+.home-nav__navigate div:hover {
+  text-decoration: underline;
+}
+
+.home-nav__register-login-group .btn {
+  padding: 14px 24px;
+  background-color: transparent;
+  color: var(--text-color-blue);
+  transition: all 0.2s ease-in-out;
+}
+
+.home-nav__login-btn.btn {
+  border: 3px solid var(--button-primary-color);
+}
+
+.home-nav__register-btn:hover {
+  color: var(--text-color-white);
+}
+
+.home-nav__login-btn.btn:hover {
+  color: var(--text-color-white);
+  border-color: var(--border-white-color);
+}

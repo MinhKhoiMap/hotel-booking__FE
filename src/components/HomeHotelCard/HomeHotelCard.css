@@ -1,0 +1,97 @@
+.hot-hotel_item-wrapper {
+  width: 342.39px;
+  /* height: 541.69px; */
+  margin: 0 30px 0 24px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  z-index: 999;
+  position: relative;
+}
+
+.hot-hotel_item-wrapper:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.hot-hotel__list a:nth-child(2) .hot-hotel_item-wrapper {
+  transform: scale(1.07);
+}
+
+.hot-hotel__thumbnail img {
+  width: 100%;
+  height: 270px;
+}
+
+.hot-hotel__header {
+  padding: 14px 18px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color-black);
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 30px;
+}
+
+.hot-hotel__rank span {
+  margin-left: 6px;
+}
+
+.hot-hotel__body {
+  padding: 20px;
+}
+
+.hot-hotel__label {
+  margin-bottom: 16px;
+}
+
+.hot-hotel__label h3 {
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 30px;
+}
+
+.hot-hotel__label p {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  line-height: 29px;
+}
+
+.hot-hotel__feature-group {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hot-hotel__feature-group i {
+  font-size: 1.7rem;
+}
+
+.hot-hotel__footer {
+  padding: 0 24px 24px;
+}
+
+.booking-btn {
+  padding: 8px 0;
+  width: 100%;
+  background-color: transparent;
+  border: 4px solid var(--primary-color-bg);
+  transition: background-color 0.2s ease-out;
+  text-transform: capitalize;
+}
+
+.booking-btn:hover {
+  color: var(--text-color-white);
+  background-color: var(--primary-color-bg);
+}
+
+.hot-hotel__list a:nth-child(2) .booking-btn {
+  background-color: var(--primary-color-bg);
+  color: var(--text-color-white);
+  transition: none;
+}
+
+.hot-hotel__list a:nth-child(2) .booking-btn:hover {
+  background-color: #888;
+  border-color: #888;
+}
