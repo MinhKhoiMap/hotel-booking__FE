@@ -14,6 +14,10 @@ const Discovery = () => {
     roomService.getAllRooms().then((response) => setRoomsArr(response.data));
   }, [roomsArr.length]);
 
+  useEffect(() => {
+    document.title = "Hotel Booking";
+  }, []);
+
   return (
     <div className="discovery-page__container">
       <div className="discovery-page__nav-bar">

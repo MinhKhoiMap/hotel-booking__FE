@@ -25,6 +25,10 @@ const SignUp = (props) => {
     );
   }, [params]);
 
+  useEffect(() => {
+    document.title = "Đăng Ký";
+  }, []);
+
   const [showOverlay, SetShowOverlay] = useState(false);
 
   const [avatarURL, SetAvatarURL] = useState("");

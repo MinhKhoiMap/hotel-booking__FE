@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import google from "../../assets/images/Icon/google.png";
@@ -56,6 +56,10 @@ const Login = (props) => {
       console.log(key, formData.get(key));
     }
   };
+
+  useEffect(() => {
+    document.title = "Đăng Nhập";
+  }, []);
 
   return (
     <div className="login-page__modal form">

@@ -14,7 +14,7 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Booking = (props) => {
-  console.log(props.user, "vloz");
+  // console.log(props.user, "vloz");
   const navigate = useNavigate();
 
   const get_day_of_time = (d1, d2) => {
@@ -55,7 +55,7 @@ const Booking = (props) => {
   };
 
   const handleChangeEmail = (e) => {
-    console.log([e.target], "email");
+    // console.log([e.target], "email");
     setIn4_email(e.target.value);
   };
 
@@ -114,7 +114,8 @@ const Booking = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+    document.title = "Đặt phòng | " + rooms.name;
+  }, [rooms.name]);
 
   useEffect(() => {
     roomService.getRoomByID(roomsID).then((room) => setRooms(room.data[0]));

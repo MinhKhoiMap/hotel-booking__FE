@@ -3,7 +3,7 @@ import "./RoomDetails.css";
 import { useNavigate, useParams } from "react-router";
 import { DatePicker } from "antd";
 import ScrollToTop from "react-scroll-to-top";
-import moment from "moment";
+// import moment from "moment";
 import { connect } from "react-redux";
 import DiscoveryNav from "../../components/DiscoveryNav/DiscoveryNav";
 import SearchTopBar from "../../components/SearchTopBar/SearchTopBar";
@@ -36,15 +36,15 @@ const RoomDetails = (props) => {
   const [dates, setDates] = useState([]);
 
   // console.log(dates, "dates");
-  console.log(moment("12-12-2003", "DD-MM-YYYY"));
+  // console.log(moment("12-12-2003", "DD-MM-YYYY"));
 
   const handleDateBookingPick = (values) => {
-    console.log(values, "handleDateBookingPick");
-    console.log(moment(values[0]).format("DD-MM-YYYY"), "haizz");
+    // console.log(values, "handleDateBookingPick");
+    // console.log(moment(values[0]).format("DD-MM-YYYY"), "haizz");
     setDates(values.map((date) => new Date(date)));
   };
 
-  console.log(dates, "hở hở");
+  // console.log(dates, "hở hở");
 
   const handleBookingRoom = () => {
     props.setIn4Booking({ dates, adults, childs, beds, roomsNumber });
@@ -53,7 +53,11 @@ const RoomDetails = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    roomService.getRoomByID(roomsID["*"]).then((room) => setRoom(room.data[0]));
+
+    roomService.getRoomByID(roomsID["*"]).then((room) => {
+      setRoom(room.data[0]);
+      document.title = room.data[0].name;
+    });
   }, [roomsID]);
 
   return (
@@ -92,7 +96,7 @@ const RoomDetails = (props) => {
                     </figure>
                   );
                 else {
-                  return <></>;
+                  return null;
                 }
               })}
           </div>
