@@ -1,7 +1,7 @@
 import http from "../http-common";
 
 class UserServiceClass {
-  constructor() {}
+  // constructor() {}
 
   getUser(options) {
     return http.get("/api/auth", options);
@@ -28,4 +28,6 @@ class UserServiceClass {
   }
 }
 
-export default new UserServiceClass();
+const UserService = new UserServiceClass();
+
+export default UserService;

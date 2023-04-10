@@ -9,14 +9,14 @@ const HotelBookingLogo = () => {
   return (
     <div className="hotel-booking-logo__container">
       <div className="left">
-        <img src={lastLeftLayoutLogo} />
+        <img src={lastLeftLayoutLogo} alt="" />
       </div>
       <div className="right">
-        <img src={lastRightLayoutLogo} className="last-layout" />
-        <img src={midRightLayoutLogo} className="mid-layout" />
+        <img src={lastRightLayoutLogo} className="last-layout" alt="" />
+        <img src={midRightLayoutLogo} className="mid-layout" alt="" />
       </div>
       <div className="main">
-        <img src={firstLayoutLogo} />
+        <img src={firstLayoutLogo} alt="" />
       </div>
     </div>
   );

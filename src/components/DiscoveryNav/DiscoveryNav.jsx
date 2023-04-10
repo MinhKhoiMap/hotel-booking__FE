@@ -10,14 +10,14 @@ const DiscoveryNav = (props) => {
   const params = useLocation();
   // console.log(params, "navigate");
 
-  const [avatarURL, setAvatarURL] = useState(false);
+  const [avatarURL, setAvatarURL] = useState("");
 
   useEffect(() => {
     localStorage.getItem("userToken") &&
       props.getUser(localStorage.getItem("userToken")).then((user) => {
         setAvatarURL(user[0].avatarURL);
       });
-  }, []);
+  }, [props]);
 
   return (
     <div className="discovery-nav__wrapper">
@@ -44,7 +44,7 @@ const DiscoveryNav = (props) => {
             <div
               className="avatar"
               style={{
-                backgroundImage: `url(${avatarURL.slice(0, avatarURL.length)})`,
+                backgroundImage: `url(${avatarURL})`,
               }}
             ></div>
             <i className="fa-solid fa-bars"></i>

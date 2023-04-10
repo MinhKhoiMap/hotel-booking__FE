@@ -1,7 +1,8 @@
 import http from "../http-common";
 
 class RoomServiceClass {
-  constructor() {}
+  // constructor() {}
+
   getRoomByID(id) {
     return http.get(`/api/rooms/${id}`);
   }
@@ -11,4 +12,6 @@ class RoomServiceClass {
   }
 }
 
-export default new RoomServiceClass();
+const RoomService = new RoomServiceClass();
+
+export default RoomService;

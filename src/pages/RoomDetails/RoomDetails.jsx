@@ -54,7 +54,7 @@ const RoomDetails = (props) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     roomService.getRoomByID(roomsID["*"]).then((room) => setRoom(room.data[0]));
-  }, []);
+  }, [roomsID]);
 
   return (
     <div className="room-details-page__container">
@@ -91,6 +91,9 @@ const RoomDetails = (props) => {
                       <img src={image} alt="" />
                     </figure>
                   );
+                else {
+                  return <></>;
+                }
               })}
           </div>
           <button className="show-all-img-btn btn">
@@ -105,10 +108,10 @@ const RoomDetails = (props) => {
             <a href="#convenient">
               <li>Tiện nghi</li>
             </a>
-            <a href="#">
+            <a href="##">
               <li>Đánh giá</li>
             </a>
-            <a href="#">
+            <a href="##">
               <li>Chính sách</li>
             </a>
           </ul>

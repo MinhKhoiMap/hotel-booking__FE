@@ -79,7 +79,7 @@ const HomeHotHotel = () => {
     startIndex === 0
       ? (previousRef.current.disabled = true)
       : (previousRef.current.disabled = false);
-  }, [endIndex, startIndex]);
+  }, [endIndex, startIndex, hotelList.length]);
 
   const handleNextSlide = () => {
     setEndIndex((prev) => {

@@ -33,13 +33,22 @@ const PageFooter = () => {
         </div>
       </div>
       <div className="homepage__footer-socials">
-        <a href="" className="homepage__footer-social--fb">
+        <a
+          href="https://www.facebook.com/khoimapp"
+          className="homepage__footer-social--fb"
+        >
           <i className="fa-brands fa-facebook"></i>
         </a>
-        <a href="" className="homepage__footer-social--instagram">
+        <a
+          href="https://www.facebook.com/khoimapp"
+          className="homepage__footer-social--instagram"
+        >
           <i className="fa-brands fa-square-instagram"></i>
         </a>
-        <a href="" className="homepage__footer-social--twitter">
+        <a
+          href="https://www.facebook.com/khoimapp"
+          className="homepage__footer-social--twitter"
+        >
           <i className="fa-brands fa-twitter"></i>
         </a>
       </div>

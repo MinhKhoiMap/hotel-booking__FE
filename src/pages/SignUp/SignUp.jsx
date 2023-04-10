@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SignUp.css";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import google from "../../assets/images/Icon/google.png";
@@ -23,7 +23,7 @@ const SignUp = (props) => {
     SetEmail(
       path.slice(path.search("email") + "email=".length, path.search("&"))
     );
-  }, [params.search]);
+  }, [params]);
 
   const [showOverlay, SetShowOverlay] = useState(false);
 

@@ -1,7 +1,7 @@
 import http from "../http-common";
 
 class BookingServiceClass {
-  constructor() {}
+  // constructor() {}
 
   getBookingByID(id) {
     return http.get(`/api/booking/${id}`);
@@ -12,4 +12,6 @@ class BookingServiceClass {
   }
 }
 
-export default new BookingServiceClass();
+const BookingService = new BookingServiceClass();
+
+export default BookingService;

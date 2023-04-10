@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Accounts.css";
 import { Link, Outlet } from "react-router-dom";
 import LogoRed from "../../assets/images/LogoRed.png";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SearchTile.css";
 import { DatePicker } from "antd";
 import beach from "../../assets/images/discovery-bg-search.png";
@@ -12,10 +12,8 @@ const SearchTile = () => {
   const [childs, setChilds] = useState(0);
   const [rooms, setRooms] = useState(1);
   const [beds, setBeds] = useState(1);
-  const [datesCome, setDatesCome] = useState();
-  const [datesLeave, setDatesLeave] = useState();
-
-  const handleDecreaseRoom = () => {};
+  // const [datesCome, setDatesCome] = useState();
+  // const [datesLeave, setDatesLeave] = useState();
 
   return (
     <div className="search-tile__container">

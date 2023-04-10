@@ -114,13 +114,16 @@ const Booking = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     roomService.getRoomByID(roomsID).then((room) => setRooms(room.data[0]));
     if (props.user) {
       setIn4_name(props.user.name);
       setIn4_email(props.user.email);
       setIn4_phoneNumber(props.user.phoneNumber);
     }
-  }, []);
+  }, [props.user, roomsID]);
 
   useEffect(() => {
     if (props.user) {
@@ -149,7 +152,15 @@ const Booking = (props) => {
     } else {
       setBookingBtnDisabled(false);
     }
-  }, [in4_name, in4_email, in4_phoneNumber, in4_address]);
+  }, [
+    in4_name,
+    in4_email,
+    in4_phoneNumber,
+    in4_address,
+    props.booking.dates,
+    props.booking.adults,
+    props.booking.roomsNumber,
+  ]);
 
   return (
     <div className="booking-page__container">
@@ -231,8 +242,15 @@ const Booking = (props) => {
           <div className="booking-page__order-step">
             <div className="booking-page__policy">
               Thực hiện <i>Đặt phòng</i> đồng nghĩa với việc bạn chấp nhận tuân
-              theo <a href="#">Điều khoản sử dụng</a> và{" "}
-              <a href="#">Chính sách bảo mật</a> của Hotel Booking.
+              theo{" "}
+              <a href="https://www.facebook.com/khoimapp/">
+                Điều khoản sử dụng
+              </a>{" "}
+              và{" "}
+              <a href="https://www.facebook.com/khoimapp/">
+                Chính sách bảo mật
+              </a>{" "}
+              của Hotel Booking.
             </div>
             <button
               className="booking-page__book-btn btn"
@@ -302,7 +320,10 @@ const Booking = (props) => {
                 </ul>
               </div>
             </div>
-            <a href="#" className="booking-page__cancel-room-policy">
+            <a
+              href="https://www.facebook.com/khoimapp/"
+              className="booking-page__cancel-room-policy"
+            >
               Chính sách hủy phòng
             </a>
           </div>
