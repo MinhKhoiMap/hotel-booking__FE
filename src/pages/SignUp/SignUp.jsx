@@ -11,11 +11,11 @@ import LoadOverlay from "../../components/LoadOverlay/LoadOverlay";
 
 const SignUp = (props) => {
   const navigate = useNavigate();
-  console.log(props, "Sign Up props");
+  // console.log(props, "Sign Up props");
 
   const params = useLocation();
   useEffect(() => {
-    console.log(params);
+    // console.log(params);
     const path = params.search;
     SetAvatarURL(
       path.slice(path.search("avatar") + "avatar=".length, path.length)
@@ -82,12 +82,12 @@ const SignUp = (props) => {
       props
         .createUser(formData)
         .then((res) => {
-          console.log(res, "res ben");
+          // console.log(res, "res ben");
           SetShowOverlay(false);
           navigate("/");
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
           toast.warning(
             "Tài khoản này đã tồn tại! Vui lòng thực hiện đăng nhập."
           );
@@ -97,10 +97,10 @@ const SignUp = (props) => {
     } else {
       toast.error("Vui lòng điền đầy đủ phiếu đăng ký");
     }
-    console.log(formData);
-    for (var key of formData.keys()) {
-      console.log(key, formData.get(key));
-    }
+    // console.log(formData);
+    // for (var key of formData.keys()) {
+    //   console.log(key, formData.get(key));
+    // }
   };
 
   return (

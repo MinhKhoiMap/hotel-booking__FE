@@ -26,14 +26,14 @@ const Login = (props) => {
       props
         .getUserByEmail(formData)
         .then((res) => {
-          console.log(res, "fff");
+          // console.log(res, "fff");
           if (res?.data?.userToken) {
             localStorage.setItem("userToken", res.data.userToken);
             navigate(-1);
           } else throw res;
         })
         .catch((err) => {
-          console.log(err, "lnnnfffffn");
+          // console.log(err, "lnnnfffffn");
 
           toast.error(err.response.data.message);
         });
@@ -42,19 +42,19 @@ const Login = (props) => {
       props
         .getUserByPhoneNumber(formData)
         .then((res) => {
-          console.log(res, "lnnnn");
+          // console.log(res, "lnnnn");
           if (res?.data?.userToken) {
             navigate("/");
           } else throw res;
         })
         .catch((err) => {
-          console.log(err, "fffffn");
+          // console.log(err, "fffffn");
           toast.error(err.response.data.message);
         });
     }
-    for (var key of formData.keys()) {
-      console.log(key, formData.get(key));
-    }
+    // for (var key of formData.keys()) {
+    //   console.log(key, formData.get(key));
+    // }
   };
 
   useEffect(() => {
