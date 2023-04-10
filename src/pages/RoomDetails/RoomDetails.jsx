@@ -27,6 +27,7 @@ const RoomDetails = (props) => {
   const post = 211;
 
   const [showSettingList, setShowSettingList] = useState(false);
+  const [disabledBookingBtn, setDisabledBookingBtn] = useState(false);
 
   const [room, setRoom] = useState({});
   const [roomsNumber, setRoomsNumber] = useState(1);
@@ -59,6 +60,11 @@ const RoomDetails = (props) => {
       document.title = room.data[0].name;
     });
   }, [roomsID]);
+
+  useEffect(() => {
+    if (dates.length < 2) setDisabledBookingBtn(true);
+    else setDisabledBookingBtn(false);
+  }, [dates.length]);
 
   return (
     <div className="room-details-page__container">
@@ -327,6 +333,7 @@ const RoomDetails = (props) => {
             <button
               className="booking-part__book-btn btn"
               onClick={handleBookingRoom}
+              disabled={disabledBookingBtn}
             >
               Đặt phòng
             </button>

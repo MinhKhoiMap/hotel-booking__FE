@@ -3,12 +3,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./DiscoveryNav.css";
 import { connect } from "react-redux";
 import LogoRed from "../../assets/images/LogoRed.png";
+import user_noava from "../../assets/images/Icon/user-noava.png";
 import { getUser } from "../../redux/actions/user";
 
 const DiscoveryNav = (props) => {
   const navigate = useNavigate();
   const params = useLocation();
   // console.log(params, "navigate");
+  // console.log(props.user, "navigate");
 
   const [avatarURL, setAvatarURL] = useState("");
 
@@ -17,7 +19,8 @@ const DiscoveryNav = (props) => {
       props.getUser(localStorage.getItem("userToken")).then((user) => {
         setAvatarURL(user[0].avatarURL);
       });
-  }, [props]);
+    // console.log("clgg");
+  }, [props.user, props]);
 
   return (
     <div className="discovery-nav__wrapper">
@@ -39,19 +42,19 @@ const DiscoveryNav = (props) => {
         </ul>
       </div>
       <div className="discovery-nav__tools-group">
-        {avatarURL ? (
+        {props.user ? (
           <div className="discovery-nav__tool--account">
             <div
               className="avatar"
               style={{
-                backgroundImage: `url(${avatarURL})`,
+                backgroundImage: `url(${avatarURL ? avatarURL : user_noava})`,
               }}
             ></div>
             <i className="fa-solid fa-bars"></i>
 
             <ul className="discovery-nav__tool-list">
               <li>
-                <Link to="/accounts/sign-up">Profile</Link>
+                <Link to="">Profile</Link>
               </li>
               <li
                 onClick={() => {
@@ -60,6 +63,7 @@ const DiscoveryNav = (props) => {
                     ? navigate("/")
                     : window.location.reload();
                 }}
+                className="log-out-btn"
               >
                 Log out
               </li>

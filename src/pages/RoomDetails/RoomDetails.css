@@ -318,6 +318,13 @@
   overflow: hidden;
 }
 
+.room-details-page__info-details
+  .booking-part
+  .booking-part__book-btn:disabled {
+  color: #ccc;
+  background-color: #999;
+}
+
 .room-details-page__info-details .booking-part .booking-part__book-btn::before {
   content: "";
   width: 0;
@@ -337,6 +344,12 @@
   .booking-part
   .booking-part__book-btn:hover::before {
   width: 100%;
+}
+
+.room-details-page__info-details
+  .booking-part
+  .booking-part__book-btn:disabled:hover::before {
+  width: 0 !important;
 }
 
 .booking-part .search-tile__room-detail {

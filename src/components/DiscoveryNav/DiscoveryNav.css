@@ -52,7 +52,7 @@
 }
 
 .discovery-nav__tool--account {
-  padding: 10px 16px;
+  padding: 5px 10px;
   margin-right: -9px;
   display: flex;
   align-items: center;
@@ -118,4 +118,8 @@
 
 .discovery-nav__tool--account:hover .discovery-nav__tool-list {
   display: block;
+}
+
+.discovery-nav__tool-list .log-out-btn:hover {
+  background-color: #ff0000;
 }
