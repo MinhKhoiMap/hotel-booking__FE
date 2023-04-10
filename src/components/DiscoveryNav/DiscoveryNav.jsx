@@ -42,7 +42,7 @@ const DiscoveryNav = (props) => {
         </ul>
       </div>
       <div className="discovery-nav__tools-group">
-        {props.user ? (
+        {props.user.length > 0 ? (
           <div className="discovery-nav__tool--account">
             <div
               className="avatar"
