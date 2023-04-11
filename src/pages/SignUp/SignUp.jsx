@@ -9,6 +9,8 @@ import { connect } from "react-redux";
 
 import LoadOverlay from "../../components/LoadOverlay/LoadOverlay";
 
+const baseURL = "https://api-hotelbooking.onrender.com";
+
 const SignUp = (props) => {
   const navigate = useNavigate();
   // console.log(props, "Sign Up props");
@@ -185,10 +187,7 @@ const SignUp = (props) => {
         <div className="line"></div>
       </div>
       <div className="signup-page__others-options-groups">
-        <a
-          className="google-type btn"
-          href="http://localhost:3002/api/auth/google"
-        >
+        <a className="google-type btn" href={`${baseURL}/api/auth/google`}>
           <img src={google} alt="Google" />
           Google
         </a>

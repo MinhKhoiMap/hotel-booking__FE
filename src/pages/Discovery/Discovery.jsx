@@ -11,7 +11,10 @@ const Discovery = () => {
   const [roomsArr, setRoomsArr] = useState([]);
 
   useEffect(() => {
-    roomService.getAllRooms().then((response) => setRoomsArr(response.data));
+    roomService.getAllRooms().then((response) => {
+      console.log(response);
+      setRoomsArr(response.data);
+    });
   }, [roomsArr.length]);
 
   useEffect(() => {
