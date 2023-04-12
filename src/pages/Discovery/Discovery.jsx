@@ -12,7 +12,7 @@ const Discovery = () => {
 
   useEffect(() => {
     roomService.getAllRooms().then((response) => {
-      console.log(response);
+      // console.log(response);
       setRoomsArr(response.data);
     });
   }, [roomsArr.length]);

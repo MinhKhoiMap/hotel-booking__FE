@@ -7,7 +7,7 @@ export const getUser = (token) => async (dispatch) => {
       headers: { authorization: token },
     });
 
-    // console.log(response, "res ở action");
+    console.log(response, "res ở action");
 
     dispatch({
       type: RETRIEVE_USER,

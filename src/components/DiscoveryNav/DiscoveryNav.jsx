@@ -10,23 +10,42 @@ const DiscoveryNav = (props) => {
   const navigate = useNavigate();
   const params = useLocation();
   // console.log(params, "navigate");
-  // console.log(props.user, "navigate");
+  // console.log(props, String(props.user?.length), props.user.length, "navigate");
 
   const [avatarURL, setAvatarURL] = useState("");
 
+  const getToken = () => {
+    return params.search.slice(
+      params.search.search("token") + "token=".length,
+      params.search.length
+    );
+  };
+
+  console.log(!!getToken());
+  const fetchUser = (token) => {
+    // console.log(token, "fetchUser");
+    props
+      .getUser(token)
+      .then((user) => {
+        setAvatarURL(user[0].avatarURL);
+      })
+      .catch(() => {
+        localStorage.removeItem("userToken");
+        window.location.reload();
+      });
+  };
+
   useEffect(() => {
-    localStorage.getItem("userToken") &&
-      props
-        .getUser(localStorage.getItem("userToken"))
-        .then((user) => {
-          setAvatarURL(user[0].avatarURL);
-        })
-        .catch(() => {
-          localStorage.removeItem("userToken");
-          window.location.reload();
-        });
-    // console.log("clgg");
-  }, [props.user, props]);
+    if (getToken()) {
+      localStorage.setItem("userToken", getToken());
+      fetchUser(getToken());
+      navigate("/");
+    } else {
+      localStorage.getItem("userToken") &&
+        !props.user.length &&
+        fetchUser(localStorage.getItem("userToken"));
+    }
+  });
 
   return (
     <div className="discovery-nav__wrapper">
