@@ -16,9 +16,15 @@ const DiscoveryNav = (props) => {
 
   useEffect(() => {
     localStorage.getItem("userToken") &&
-      props.getUser(localStorage.getItem("userToken")).then((user) => {
-        setAvatarURL(user[0].avatarURL);
-      });
+      props
+        .getUser(localStorage.getItem("userToken"))
+        .then((user) => {
+          setAvatarURL(user[0].avatarURL);
+        })
+        .catch(() => {
+          localStorage.removeItem("userToken");
+          window.location.reload();
+        });
     // console.log("clgg");
   }, [props.user, props]);
 

@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { getUserByEmail, getUserByPhoneNumber } from "../../redux/actions/user";
 
-const baseURL = "https://api-hotelbooking.onrender.com";
+const baseURL = "http://localhost:3002";
 
 const Login = (props) => {
   const navigate = useNavigate();
@@ -172,12 +172,10 @@ const Login = (props) => {
         <div className="line"></div>
       </div>
       <div className="login-page__others-options-groups">
-        <Link>
-          <a href={`${baseURL}/api/auth/google`} className="google-type btn">
-            <img src={google} alt="Google" />
-            Google
-          </a>
-        </Link>
+        <a href={`${baseURL}/api/auth/google`} className="google-type btn">
+          <img src={google} alt="Google" />
+          Google
+        </a>
       </div>
       <div className="login-page__policy-note">
         Khi đăng nhập, tôi đồng ý với các <Link>Điều khoản sử dụng</Link> và{" "}
