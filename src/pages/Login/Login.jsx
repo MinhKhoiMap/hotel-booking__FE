@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { getUserByEmail, getUserByPhoneNumber } from "../../redux/actions/user";
 
-const baseURL = "http://localhost:3002";
+const baseURL = "https://api-hotelbooking.onrender.com";
 
 const Login = (props) => {
   const navigate = useNavigate();
