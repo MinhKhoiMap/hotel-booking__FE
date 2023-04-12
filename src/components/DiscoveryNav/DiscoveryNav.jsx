@@ -48,7 +48,7 @@ const DiscoveryNav = (props) => {
   });
 
   useEffect(() => {
-    setAvatarURL(props.user[0].avatarURL);
+    props.user.length && setAvatarURL(props.user[0].avatarURL);
   }, [props.user]);
 
   return (
