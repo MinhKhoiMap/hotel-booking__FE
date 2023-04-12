@@ -21,7 +21,7 @@ const DiscoveryNav = (props) => {
     );
   };
 
-  console.log(!!getToken());
+  // console.log(!!getToken());
   const fetchUser = (token) => {
     // console.log(token, "fetchUser");
     props
@@ -46,6 +46,10 @@ const DiscoveryNav = (props) => {
         fetchUser(localStorage.getItem("userToken"));
     }
   });
+
+  useEffect(() => {
+    setAvatarURL(props.user[0].avatarURL);
+  }, [props.user]);
 
   return (
     <div className="discovery-nav__wrapper">
