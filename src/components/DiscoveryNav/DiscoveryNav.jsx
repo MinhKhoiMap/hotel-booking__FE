@@ -36,7 +36,7 @@ const DiscoveryNav = (props) => {
   };
 
   useEffect(() => {
-    if (getToken()) {
+    if (getToken() && params.search.search("token") >= 0) {
       localStorage.setItem("userToken", getToken());
       fetchUser(getToken());
       navigate("/");
