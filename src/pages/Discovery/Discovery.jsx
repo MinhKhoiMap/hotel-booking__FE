@@ -6,8 +6,11 @@ import RoomsList from "../../components/RoomsList/RoomsList";
 import PageFooter from "../../components/PageFooter/PageFooter";
 
 import roomService from "../../services/room.service";
+import { useLocation, useNavigate } from "react-router";
 
 const Discovery = () => {
+  const navigate = useNavigate();
+  const params = useLocation();
   const [roomsArr, setRoomsArr] = useState([]);
 
   useEffect(() => {
@@ -20,6 +23,12 @@ const Discovery = () => {
   useEffect(() => {
     document.title = "Hotel Booking";
   }, []);
+
+  useEffect(() => {
+    if (params.search.search("email") >= 0) {
+      navigate(`/accounts/sign-up${params.search}`);
+    }
+  });
 
   return (
     <div className="discovery-page__container">
